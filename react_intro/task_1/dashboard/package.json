@@ -30,7 +30,7 @@
       "<rootDir>/src/setupTests.js"
     ],
     "transform": {
-      "^.+\\.(js|jsx)$": "<rootDir>/fileTransformer.js"
+      "^.+\\.(js|jsx)$": "<rootDir>/fileTransformer.cjs"
     },
     "moduleNameMapper": {
     "\\.(jpg|jpeg|png|gif|svg)$": "<rootDir>/jestMock.js",
