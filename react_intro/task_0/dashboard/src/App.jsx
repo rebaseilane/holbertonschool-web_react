@@ -3,54 +3,45 @@
  * -------------------------
  * Main dashboard application component.
  */
+
 import React from "react";
 import "./App.css";
 import holbertonLogo from "./assets/holberton-logo.jpg";
-import Notifications from "./Notifications";
-import { getCurrentYear, getFooterCopy } from "./utils";
 
 /**
- * Main App component.
+ * App component
  *
  * @returns {JSX.Element}
  */
 function App() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className="App">
-      <div className="root-notifications">
-        <Notifications />
-      </div>
 
-      <div className="App-header">
-        <img src={holbertonLogo} alt="holberton logo" className="logo" />
+      {/* HEADER */}
+      <header className="App-header">
+        <img
+          src={holbertonLogo}
+          alt="holberton logo"
+          className="logo"
+        />
 
         <h1>School dashboard</h1>
-      </div>
+      </header>
 
-      <div className="App-body">
+      {/* BODY */}
+      <main className="App-body">
         <p>Login to access the full dashboard</p>
+      </main>
 
-        {/* EMAIL FIELD */}
-        <label htmlFor="email">Email</label>
-        <input type="email" id="email" name="email" />
-
-        <br />
-
-        {/* PASSWORD FIELD */}
-        <label htmlFor="password">Password</label>
-        <input type="password" id="password" name="password" />
-
-        <br />
-
-        {/* BUTTON */}
-        <button type="button">OK</button>
-      </div>
-
-      <div className="App-footer">
+      {/* FOOTER (IMPORTANT: must be <footer>, not div) */}
+      <footer className="App-footer">
         <p>
-          Copyright {getCurrentYear()} - {getFooterCopy(false)}
+          Copyright {currentYear} - Holberton School
         </p>
-      </div>
+      </footer>
+
     </div>
   );
 }
