@@ -1,0 +1,15 @@
+/**
+ * Notifications.css
+ * -------------------------
+ * Styles for Notifications component.
+ */
+
+.notification-items {
+  border: 2px dashed #e1003c;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.notification-items p {
+  margin: 0;
+}
