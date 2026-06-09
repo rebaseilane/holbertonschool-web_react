@@ -23,7 +23,6 @@ describe("App Component Tests", () => {
       /login to access the full dashboard/i
     );
 
-    // REQUIRED FIX: regex-based footer query
     const footerRegex = /copyright \d{4}.*holberton school/i;
     const footerText = screen.getByText(footerRegex);
 
@@ -36,5 +35,41 @@ describe("App Component Tests", () => {
 
     const logo = screen.getByAltText(/holberton logo/i);
     expect(logo).toBeInTheDocument();
+  });
+
+  /**
+   * NEW TEST 1: Inputs (email + password)
+   */
+  test("renders email and password inputs", () => {
+    render(<App />);
+
+    const emailInput = screen.getByLabelText(/email/i);
+    const passwordInput = screen.getByLabelText(/password/i);
+
+    expect(emailInput).toBeInTheDocument();
+    expect(passwordInput).toBeInTheDocument();
+  });
+
+  /**
+   * NEW TEST 2: Labels
+   */
+  test("renders email and password labels", () => {
+    render(<App />);
+
+    const emailLabel = screen.getByText(/email/i);
+    const passwordLabel = screen.getByText(/password/i);
+
+    expect(emailLabel).toBeInTheDocument();
+    expect(passwordLabel).toBeInTheDocument();
+  });
+
+  /**
+   * NEW TEST 3: Button
+   */
+  test("renders OK button", () => {
+    render(<App />);
+
+    const button = screen.getByRole("button", { name: /ok/i });
+    expect(button).toBeInTheDocument();
   });
 });
