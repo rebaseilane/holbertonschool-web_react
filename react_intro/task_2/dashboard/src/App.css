@@ -1,0 +1,42 @@
+/**
+ * App.css
+ * -------------------------
+ * Styling for dashboard layout.
+ */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 3px solid #e1003c;
+}
+
+.App-header h1 {
+  color: #e1003c;
+  font-size: 24px;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+}
+
+.App-body {
+  flex: 1;
+  padding: 40px;
+  font-size: 18px;
+}
+
+.App-footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 3px solid #e1003c;
+  font-style: italic;
+}
