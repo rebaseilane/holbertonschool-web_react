@@ -36,20 +36,30 @@ function App() {
         <p>Login to access the full dashboard</p>
 
         {/* EMAIL */}
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-        />
+        <label htmlFor="email">
+          Email
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+          />
+        </label>
+
+        <br />
 
         {/* PASSWORD */}
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-        />
+        <label htmlFor="password">
+          Password
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+          />
+        </label>
+
+        <br />
 
         {/* BUTTON */}
         <button type="button">
