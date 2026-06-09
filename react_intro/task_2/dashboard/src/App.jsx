@@ -13,7 +13,7 @@ import { getCurrentYear, getFooterCopy } from "./utils";
 /**
  * App component
  *
- * @returns {JSX.Element} Dashboard page
+ * @returns {JSX.Element}
  */
 function App() {
   return (
@@ -23,7 +23,11 @@ function App() {
       </div>
 
       <div className="App-header">
-        <img src={holbertonLogo} alt="holberton logo" className="logo" />
+        <img
+          src={holbertonLogo}
+          alt="holberton logo"
+          className="logo"
+        />
 
         <h1>School dashboard</h1>
       </div>
@@ -31,20 +35,33 @@ function App() {
       <div className="App-body">
         <p>Login to access the full dashboard</p>
 
-        <label htmlFor="email">Email:</label>
+        {/* EMAIL */}
+        <label htmlFor="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+        />
 
-        <input type="email" id="email" name="email" />
+        {/* PASSWORD */}
+        <label htmlFor="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+        />
 
-        <label htmlFor="password">Password:</label>
-
-        <input type="password" id="password" name="password" />
-
-        <button type="button">OK</button>
+        {/* BUTTON */}
+        <button type="button">
+          OK
+        </button>
       </div>
 
       <div className="App-footer">
         <p>
-          Copyright {getCurrentYear()} - {getFooterCopy(false)}
+          Copyright {getCurrentYear()} -
+          {" "}
+          {getFooterCopy(false)}
         </p>
       </div>
     </div>
