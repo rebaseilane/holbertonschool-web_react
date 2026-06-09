@@ -4,12 +4,32 @@
  * Styles for Notifications component.
  */
 
-.notification-items {
+.Notifications {
   border: 2px dashed #e1003c;
   padding: 1rem;
   margin: 1rem;
+  position: relative;
+  width: 300px;
 }
 
-.notification-items p {
-  margin: 0;
+.Notifications p {
+  margin: 0 0 10px 0;
+}
+
+.Notifications ul {
+  list-style: none;
+  padding: 0;
+}
+
+.Notifications li {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+[data-priority="urgent"] {
+  color: red;
+}
+
+[data-priority="default"] {
+  color: blue;
 }

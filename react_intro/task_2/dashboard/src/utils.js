@@ -26,3 +26,12 @@ export function getFooterCopy(isIndex) {
 
   return "Holberton School main dashboard";
 }
+
+/**
+ * Returns latest notification message (HTML string).
+ *
+ * @returns {string}
+ */
+export function getLatestNotification() {
+  return "<strong>Urgent requirement</strong> - complete by EOD";
+}
